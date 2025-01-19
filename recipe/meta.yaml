@@ -1,17 +1,17 @@
 {% set name = "ndsplines" %}
-{% set version = "0.1.5" %}
+{% set version = "0.2.0.post0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ndsplines-{{ version }}.tar.gz
-  sha256: 39f1b7f0d7e0f99bc45099b87716abd62d5e5b07820680e1adb8d9188ef352b9
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ndsplines-{{ version }}.tar.gz
+  sha256: 6dfbcfdffebfa76aa286d93b63888e2562fef11566fd1cecfa2ed1e013db0a0e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 3
+  number: 0
 
 requirements:
   build:
