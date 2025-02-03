@@ -27,7 +27,7 @@ requirements:
     - pip
   run:
     - python
-    - scipy
+    - scipy < 1.15  # some interpolate._bspl internals removed
 
 test:
   imports:
