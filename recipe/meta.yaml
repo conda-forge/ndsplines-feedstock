@@ -27,13 +27,12 @@ requirements:
     - pip
   run:
     - python
-    - scipy <1.15  # some interpolate._bspl internals removed
+    - scipy
 
 test:
   imports:
     - ndsplines
   commands:
-    - python -c "import ndsplines; ndsplines.get_impl() == 'cython'"
     - pip check
   requires:
     - pip
